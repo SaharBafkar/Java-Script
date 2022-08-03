@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot password</title>
+</head>
+
+<body>
+    <script>
+
+        var userdata = [
+            { id: 1, username: 'amir', password: '010101' },
+            { id: 2, username: 'sahar', password: '101010' },
+            { id: 3, username: 'delsa.', password: '202020' },
+            { id: 4, username: 'nika', password: '303030' }
+        ]
+        var username = prompt("forgot your password? enter your username: ")
+        var mainUserData = userdata.find(function (user) {
+            return user.username === username
+                
+        })
+        if (mainUserData===undefined){
+            alert("you are not a member of this site")
+        }else
+        console.log('your password is: ', mainUserData.password)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var allProducts = [
+            { id: 1, name: 'laptop', price: 17000000 },
+            { id: 2, name: 'phone', price: 8000000 },
+            { id: 3, name: 'pen', price: 10000 },
+            { id: 4, name: 'ruler', price: 20000 },
+            { id: 5, name: 'bin', price: 150000 },
+            { id: 6, name: 'milk', price: 35000 },
+            { id: 7, name: 'water', price: 6000 }
+        ]
+        var userbasket = [{ id: 1, name: 'milk', price: 35000 },
+        { id: 1, name: 'water', price: 35000 }]
+        var userrequest = prompt("1.add product \n 2.remove product")
+        if (userrequest == '1') {
+            // alert("add product")
+            var userproductname = prompt("enter your name:")
+            var productdata
+            var isinshop = allProducts.some(function (product) {
+                if (product.name == userproductname) {
+                    productdata = product
+                    return true
+                }
+               
+            })
+            if (isinshop) {
+                var newproduct = {
+                    id: 3,
+                    name: productdata.name,
+                    price: productdata.price,
+                }
+                userbasket.push(newproduct)
+                console.log("basket: ",userbasket)
+
+            } else {
+                alert("your desire product is not exist in our shop")
+            }
+        } else if (userrequest == '2') {
+            // alert("remove product")
+            var userproductname=prompt("enter your product name:")
+            var productindex=userbasket.findIndex(function(item){
+                return item.name==userproductname
+            })
+            userbasket.splice(productindex,1)
+            console.log("basket: ",userbasket)
+        } else {
+            alert("please enter a valid option!!")
+        }
+    </script>
+</body>
+
+</html>

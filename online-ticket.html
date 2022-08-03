@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+
+<body>
+    <script>
+        var cities = {
+
+            tehran: ['tehran', 'shahryar', 'roodehen', 'boomehen'],
+            shiraz: ['fars', 'fasa', 'jamshid', 'pasargad'],
+            mashhad: ['razavi', 'shomali', 'jonoobi', 'broojerd'],
+            tabriz: ['marand', 'jolfa', 'ahar', 'helemsi']
+        }
+        var startProvince = prompt("enter the province: ")
+        var mainProvincecities = cities[startProvince]
+        mainProvincecities.forEach(function(city){ 
+            console.log(city)
+        });
+        console.log(cities[startProvince])
+    </script>
+</body>
+
+</html>

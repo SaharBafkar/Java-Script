@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+
+<body>
+    <script>
+        var taskArray = {
+            amir: ['html', 'css', 'js'],
+            sahar: ['react', 'vue', 'angular'],
+            delsa: ['seo', 'link building'],
+            nika: ['admin', 'content']
+        }
+
+        console.log(taskArray.sahar[1])
+        var newtaskname = prompt("enter the new task: ")
+        var employeename = prompt("enter the employee name: ")
+        var employeetasks=taskArray[employeename]
+        employeetasks.push(newtaskname)
+        console.log(taskArray)
+
+    </script>
+</body>
+
+</html>

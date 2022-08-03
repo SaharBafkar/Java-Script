@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+
+<body>
+    <script>
+        var toDo = [
+            { id: 1, title: 'learn js', isdoing: false },
+            { id: 2, title: 'make footer', isdoing: true },
+            { id: 3, title: 'design', isdoing: false },
+        ]
+        var usermenu = prompt("choose one of options below:\n 1-Add ToDo \n 2-Remove ToDo \n 3-Doing ToDo")
+        if (usermenu === '1') {
+            //alert("Add")
+            var newTodoName = prompt("enter the new to do name:")
+            var newTodoObject = {
+                id: toDo.length + 1,
+                title: newTodoName,
+                isdoing: false
+            }
+            toDo.push(newTodoObject)
+            console.log("ToDo's array: ", toDo)
+
+        } else if (usermenu === '2') {
+            // alert("Remove")
+            var RemoveTodoName = prompt("enter the to do name to remove:")
+            var RemovableTodoIndex = toDo.findIndex(function (todoname) {
+                return todoname.title === RemoveTodoName
+            })
+            toDo.splice(RemovableTodoIndex, 1)
+            console.log("ToDo's array: ", toDo)
+
+        } else if (usermenu === '3') {
+            //alert("Doing")
+            var todoing = prompt("enter your todo to doing:")
+            toDo.forEach(function (item) {
+                if (item.title === todoing) {
+                    item.isdoing = true
+                }
+            })
+            console.log("todo's array ", toDo)
+
+        } else {
+            alert("invalid choice")
+        }
+    </script>
+</body>
+
+</html>

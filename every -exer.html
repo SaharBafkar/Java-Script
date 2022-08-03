@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person =[
+            {name:'amir',age:46,gender:'male'},
+            {name:'sahar',age:41,gender:'female'},
+            {name:'delsa',age:8,gender:'female'},
+            {name:'nika',age:5,gender:'female'},
+            {name:'arsin',age:2,gender:'male'}
+    ]
+        var isAll = person.every(function (item) {//ta zamani ke shart false nashode tekrar mikon/ tekrar ta avalin false
+             
+            return item > 18
+
+        })
+        if (isAll){
+            console.log("welcome to conference")
+        }else{
+            console.log("sorry,you don't have permission to join conference")
+        }
+    </script>
+</body>
+
+</html>

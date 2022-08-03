@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+
+<body>
+    <script>
+        var calc = 0
+        var firstNum = Number(prompt("enter your first number: "))
+
+        var secondNum = Number(prompt("enter your second number: "))
+        var operator = prompt("enter your operator(+ - * /) ")
+        switch (operator) {
+            case '+':
+                calc = firstNum + secondNum
+                break;
+            case '-':
+                calc = firstNum - secondNum
+                break;
+            case '*':
+                calc = firstNum * secondNum
+                break;
+            case '/':
+                calc = firstNum / secondNum
+                break;
+            default:
+                break;
+        }
+        alert(firstNum + operator + secondNum + '= ' + calc)
+
+    </script>
+</body>
+
+</html>
