@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>135</title>
+</head>
+
+<body>
+    <h1>|JavaScript|</h1>
+    <button id="btn">show log</button>
+    <input type="text" id="username">
+
+    <script>
+        let logBtn = document.getElementById('btn')
+        let usernameInput = document.getElementById('username')
+        logBtn.addEventListener('click', function (event) {
+            console.log(event.target)
+        })
+        usernameInput.addEventListener('keydown', function (event) {
+            console.log(event)
+            if (event.key==='Enter'){//event.keyCode===13
+                console.log('you pressed enter')
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

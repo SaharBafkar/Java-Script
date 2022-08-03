@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>181</title>
+  <!-- <script src="/js/script.js" async></script>//فایل رو دانلود میکنه و وقتی کامل دانلود شد ان را اجرا میکنه و در حال دانلود ادامه دام رو رندر میکنه -->
+  <!--  <script src="/js/script.js" defer></script>فایل رو دانلود میکنه اما منتظر دانلود نمیماند و ادامه کار ار جلو میرود.و منتظر میماند تا دام کامل لود بشود  و سپس اجرای فایل اسکریپت رو انجام میدهد. -->
+  <!-- async , defer is used only for external js files -->
+</head>
+
+<style>
+  .drop {
+    width: 200px;
+    height: 235px;
+    border: 8px solid lightblue
+  }
+</style>
+
+<body>
+  <h1 id="react" draggable="true" ondragstart="dragStartHandler(event)">React Js</h1>
+  <h1 id="vue" draggable="true" ondragstart="dragStartHandler(event)">Vue Js</h1>
+  <div class="drop" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)"></div>
+  <script>
+    function dragStartHandler(event) {
+      console.log(event.target.id)
+      event.dataTransfer.setData('elemId', event.target.id)
+    }
+
+    function dragOverHandler(event) {
+      event.preventDefault()
+    }
+
+    function dropHandler(event) {
+
+      console.log(event.target)
+      let targetId = event.dataTransfer.getData('elemId')
+      let targetElem = document.getElementById(targetId)
+      event.target.append(targetElem)
+    }
+  </script>
+</body>
+
+</html>

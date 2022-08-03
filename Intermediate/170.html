@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>170</title>
+</head>
+<style>
+div {
+  border: 1px solid black;
+  width: 50px;
+  height: 150px;
+  overflow: scroll;
+  font-size: 28px;
+}
+</style>
+
+<!-- <body onscroll="scrollHandler()">
+  <h1>header</h1>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h1>footer</h1>
+ <script>
+  function scrollHandler(event){
+    console.log(document.documentElement.scrollTop,document.documentElement.scrollLeft)
+  }
+  </script> -->
+
+<body>
+  <div onscroll="myfunc()">
+    Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Consequuntur rerum veniam quis reiciendis ea ad
+     placeat porro consectetur, tenetur earum ratione quas? Enim 
+     voluptas autem sit facilis, saepe nemo inventore! consectetur
+      adipisicing elit.
+    Nobis tenetur id expedita repellat iusto consequuntur dolor
+    dolorem qui odit. Ea atque voluptatum numquam porro quaerat
+    rem totam, ratione quas quae!</div>
+  <p>scorlled<span id="demo">0</span> times</p>
+  <script>
+    let x = 0
+    function myfunc() {
+      document.getElementById('demo').innerHTML = x++
+    }
+  </script>
+</body>
+
+</html>

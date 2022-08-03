@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>185</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <button onclick="insertName()">insert name</button>
+  <button onclick="getName()">Get name</button>
+  <button onclick="clearData()">Clear Data</button>
+  <script>
+    
+    function insertName() {
+      localStorage.setItem('name', 'sahar')
+      console.log('insert')
+    }
+    function getName(){
+      let localName=localStorage.getItem('name')
+      console.log(localName)
+    }
+    function clearData(){
+      localStorage.clear()
+    }
+  </script>
+</body>
+
+</html>

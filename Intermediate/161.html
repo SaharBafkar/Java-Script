@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>161</title>
+</head>
+<style>
+  
+</style>
+
+<body>
+  <!-- Touch events.... -->
+  <p ontouchstart="myFunction()" ontouchmove="myTouchMove()" ontouchend="touchend()"> touch me!!</p>
+  <script>
+  function  myFunction(){
+    console.log('touched')
+   }
+   function myTouchMove(){
+    console.log('touched move')
+   }
+   function touchend(){
+    console.log('touch ended')
+   }
+  </script>
+</body>
+
+</html>

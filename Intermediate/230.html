@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>230 -mouse events...</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+<button onmousedown="mousedownhandler()" onmouseup="mouseuphandler()"
+ onmouseenter="mouseenterhandler()" onmousemove="mousemovehandler()"
+  onmousewheel="mousewheelhandler()" onmouseleave="mouseleavehandler()"
+  onmouseout="mouseouthandler()">Mouse events</button>
+
+  <script>
+    function mousedownhandler(){
+      console.log('mouse down')
+    }
+    function mouseuphandler(){
+      console.log('mouse up')
+    }
+    function mousewheelhandler(){
+      console.log('wheels')
+    }
+   function mouseenterhandler(){
+    console.log('enter')
+   }
+function mousemovehandler(){
+  console.log('move')
+}
+ function mouseleavehandler(){
+  console.log('mouse leave')
+ }
+ function mouseouthandler(){
+  console.log('mouse out')
+ }
+  </script>
+
+</body>
+
+</html>

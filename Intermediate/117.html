@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS|117</title>
+    <style>
+       .red{
+        color:red
+       }
+        .sm-Font{
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<h1 id="title" align="center">JavaScript</h1>
+    <script>
+    
+let h1Elem=document.getElementById('title')
+h1Elem.addEventListener('click',red)
+function red(){
+// h1Elem.classList.add('red')
+// h1Elem.classList.add('sm-Font')
+h1Elem.classList.toggle('red')
+}
+    </script>
+
+</body>
+
+</html>

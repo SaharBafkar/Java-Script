@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>140</title>
+</head>
+
+<body>
+  <div>
+    <h1 id="head1">head1</h1>
+    <h2 id="head2">head2</h2>
+    <h3 id="head3">head3</h3>
+    <h4 id="head4">head4</h4>
+    <h5 id="head5">head5</h5>
+    <h6 id="head6">head6</h6>
+  </div>
+  <ul id="list"> 
+    <li class="list-item">home</li>
+    <li class="list-item">about</li>
+    <li class="list-item">contact</li>
+    <li class="list-item">services</li>
+    <li class="list-item">products</li>
+  </ul>
+  <script>
+
+    let head1 = document.getElementById('head1')
+    let head2 = document.getElementById('head2')
+    let head3 = document.getElementById('head3')
+    let head4 = document.getElementById('head4')
+    let head5 = document.getElementById('head5')
+    let head6 = document.getElementById('head6')
+    // console.log(head3.parentNode)//be valed yek element delkhah dastresi mishavad
+    // console.log(head3.parentElement)//"""""""""""""""""""""""""""""""""""""""""""
+    // console.log(head3.previousElementSibling)//element ghabli sibling
+    // console.log(head3.previousElementSibling.previousElementSibling)//2 element ghabli sibling
+    // console.log(head3.nextElementSibling)//element badi sibling
+    // console.log(head3.nextElementSibling.nextElementSibling)//2 element badi sibling
+    // let listItem = document.getElementsByClassName('list-item')
+    // console.log(listItem[2].nextSibling.nextSibling)//har nodi ke bad az node feli hast barmigardoone inja (enter)
+    // console.log(listItem[2].previousSibling.previousSibling)//har nodi ke bad az node feli hast barmigardoone inja (enter)
+///////////////////////////////////////////////////////////////////////////////////////
+let list=document.getElementById('list')
+console.log(list)
+console.log(list.childElementCount)
+console.log(list.children[2])
+console.log(list.childNodes)
+console.log(list.hasChildNodes())//boolean
+console.log(list.firstChild)
+console.log(list.lastChild)
+console.log(list.firstElementChild.style.color='green')
+console.log(list.lastElementChild.style.color='red')
+
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

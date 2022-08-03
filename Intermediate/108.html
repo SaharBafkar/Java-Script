@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Object-Model</title>
+    <style>
+        #title {
+            font-weight: bolder;
+            font-size: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center" id="title" class="text">| JS Course |</h1>
+    <ul class="ulItems">
+        <li class="list-item">about</li>
+        <li class="list-item">Contact</li>
+        <li class="list-item">Services</li>
+        <li class="list-item">Home</li>
+
+    </ul>
+    <hr><button onclick="clickfunc()">change H1 color</button>
+
+    <script>
+        let h1Elem=document.getElementById('title')
+      function clickfunc(){
+       // alert('you clicked')
+       h1Elem.style.color='magenta'
+      }
+
+    </script>
+
+</body>
+
+</html>

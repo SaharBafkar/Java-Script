@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>125</title>
+</head>
+
+<body>
+    <h1 align="center">|JavaScript|</h1>
+    <hr>
+
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>services</li>
+    </ul>
+    <button onclick="addNewLi()">add new Li</button>
+    <script>
+        let ulElem = document.querySelector('ul')
+        function addNewLi() {
+            // console.log('click')
+            let newItem = prompt("enter new item: ")
+            let newLiTag = document.createElement('li')
+            newLiTag.innerHTML = newItem
+                console.log(newLiTag)
+                ulElem.append(newLiTag)
+                ///////// 3 tafavote asli append() va appendchild()//////////////////
+
+                //ba dastoor append() mitavanim yek string ra ezafe konim 
+                //vali ba dastoore appendchild() nemitavanim
+
+                // ulElem.append('hello')--> ok
+                // ulElem.appendchild('hello') -->error
+
+                //dastoor append mitavanad chandin voroodi begirad
+                //vali appenchid()nemitavanad bish az yek voroodi begirad
+
+                //  ulElem.append(firsttag,secondtag)-->ok
+                //  ulElem.appendchild(firsttag,secondtag)-->error
+
+                //natigehye dastoore append ra nemitavan dar yek var negah dasht
+                // vali appendchile ra mitavan
+
+                // let newitem=ulElem.append(firsttag)-->error
+                // let newitem=ulElem.appendchild(firsttag)-->ok
+            }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>204 - change - css - variables</title>
+
+</head>
+
+<style>
+  :root {
+    --testcolor: darkblue
+  }
+
+  h1 {
+
+    color: var(--testcolor)
+  }
+</style>
+
+<body>
+  <h1>Arkanfelez</h1>
+  <button>change color</button>
+
+  <script>
+    let h1Elem = document.querySelector('h1')
+    let btnElem = document.querySelector('button')
+    btnElem.addEventListener('click', setStyle)
+    function setStyle() {
+      document.documentElement.style.setProperty('--testcolor', 'green')
+      //access to variabl;e
+      console.log(document.documentElement.style.getPropertyValue('--testcolor'))
+    }
+
+  </script>
+
+</body>
+
+</html>

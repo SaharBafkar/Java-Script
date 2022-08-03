@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>174|Dataset</title>
+</head>
+<style>
+ 
+</style>
+
+<body>
+
+  <button data-id="25" data-name="sahar" onclick="showDataId(event)">sahar</button>
+  <button data-id="10" data-name="amir" onclick="showDataId(event)"> amir</button>
+  <button data-id="50" data-name="delsa" onclick="showDataId(event)">delsa </button>
+  <button data-id="42" data-name="nika" onclick="showDataId(event)"> nika</button>
+  <button data-id="200" data-name="arsin" onclick="showDataId(event)">arsin </button>
+
+
+
+  <script>
+    function showDataId(event){
+      console.log(event.target.dataset.id)
+      console.log(event.target.dataset.name)
+      console.log(event.target.dataset)
+    }
+  </script>
+</body>
+
+</html>

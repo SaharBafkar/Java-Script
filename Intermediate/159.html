@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>159</title>
+</head>
+<style>
+  #box {
+    width: 300px;
+    height: 250px;
+    background-color: red;
+  }
+</style>
+
+<body>
+  <div id="box"></div>
+  <button id="btn">remove</button>
+  <script>
+    const boxElem = document.getElementById('box')
+    const btnElem = document.getElementById('btn')
+    function mouseHandler() {
+      console.log('Mouse Over')
+    }
+    function removeHandler(){
+      boxElem.removeEventListener('mousemove',mouseHandler)
+    }
+    boxElem.addEventListener('mousemove', mouseHandler)
+    btnElem.addEventListener('click',removeHandler)
+  </script>
+</body>
+
+</html>

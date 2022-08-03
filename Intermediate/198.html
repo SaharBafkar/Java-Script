@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>194-animations</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <input type="text">
+  <button>check value</button>
+  <p></p>
+  <script>
+    let number = 12
+    const pElem = document.querySelector('p')
+    const inputElem = document.querySelector('input')
+    const btnElem = document.querySelector('button')
+    function checkValue(){
+      try {
+      if (inputElem.value.length > 8) {
+        throw 'too high'
+      } else {
+        throw 'too low'
+      }
+    } catch (err) {
+      pElem.innerHTML = err
+    }finally{
+      inputElem.value=''
+    }
+    }
+btnElem.addEventListener('click',checkValue)
+    // try {
+
+    //   console.log(x)
+    // } catch (err) {
+    //   pElem.innerHTML = err.message
+    // }
+   
+  </script>
+
+</body>
+
+</html>

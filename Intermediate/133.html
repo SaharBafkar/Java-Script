@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>133</title>
+</head>
+
+<body>
+    <h1>|JavaScript|</h1>
+    <button onclick="showLog()" id="btn"> show log</button>
+    <script>
+        function showLog() {
+            console.log('clicked')
+            // let btn = document.getElementById('btn')
+            // btn.addEventListener('click', showLog)
+
+        }
+        btn.onclick = showLog
+    </script>
+    <!-- /////////////// 4 ways to declare events //////////////////// -->
+    <!--(1) <button onclick="showLog()" id="btn"> show log</button> -->
+
+    <!--(2) let btn = document.getElementById('btn')
+      btn.addEventListener('click', showLog) -->
+
+    <!--(3) btn.onclick = showLog -->
+
+    <!--(4) btn.onclick=function(){
+        console.log('clicked')
+    } -->
+
+
+</body>
+
+</html>

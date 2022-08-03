@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS|117</title>
+    <style>
+.p{
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <p class="p">|JavaScript|</p>
+    <script>
+        // let colorsArray = ['red', 'yellow', 'blue', 'magenta', 'green', 'pink', 'gray']
+       
+        // setInterval(function () {
+        //   let rndcolor = Math.trunc(Math.random() * colorsArray.length)
+        //     document.body.style.backgroundColor = colorsArray[rndcolor]
+        // }, 2000)
+        setInterval(function () {
+          let rndcolor1 = Math.trunc(Math.random() * 256)
+          let rndcolor2 = Math.trunc(Math.random() * 256)
+          let rndcolor3 = Math.trunc(Math.random() * 256)
+          console.log(rndcolor1)
+          console.log(rndcolor2)
+          console.log(rndcolor3)
+          document.body.style.backgroundColor = 'rgb('+rndcolor1 +','+rndcolor2+','+rndcolor3+')'
+        }, 1000)
+    </script>
+
+</body>
+
+</html>

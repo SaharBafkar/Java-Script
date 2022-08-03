@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>194-animations</title>
+
+</head>
+
+<style>
+  .box {
+    width: 200px;
+    height: 400px;
+    background-color: red;
+    font-size: 29px;
+  }
+</style>
+
+<body>
+  <div class="box">Box</div>
+  <script>
+    const boxElem = document.querySelector('.box')
+    console.log(boxElem.style.fontSize)//null-just for inline styles//
+    ////////////////////راه اول ////////////////////////
+    let boxElemStyles = getComputedStyle(boxElem)
+    console.log(boxElemStyles.width)
+    ////////////////////////////راه دوم //////////////////////
+    let x = getComputedStyle(boxElem).getPropertyValue('background')
+    console.log(x)
+  </script>
+</body>
+
+</html>

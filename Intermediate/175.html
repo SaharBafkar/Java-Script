@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>175</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <audio src="/music/Siavash Ghomayshi - Khazoon[128].mp3"></audio>
+  <button onclick="playHandler()"> play music</button>
+  <button onclick="pauseHandler()">pause music</button>
+
+  <button onclick="durationHandler()">show music duration</button>
+  <button onclick="playBackRateHandler()">2x</button>
+  <button onclick="currentTimeHandler()">show current time</button>
+  <p id="time"></p>
+  <script>
+    let audioElem = document.querySelector('audio')
+    function playHandler() {
+      audioElem.play()
+    }
+    function pauseHandler() {
+      audioElem.pause()
+    }
+    function durationHandler() {
+      let dur = audioElem.duration
+      console.log(dur / 60)
+    }
+    function playBackRateHandler() {
+      audioElem.playbackRate = 2
+    }
+    function currentTimeHandler() {
+      console.log('current time: ', Math.floor(audioElem.currentTime))
+    }
+    let timeElem = document.querySelector('#time')
+    setInterval(function () {
+      timeElem.innerHTML = '00: ' + '0' + Math.floor(audioElem.currentTime)
+    }, 1000)
+    console.log(audioElem)
+    audioElem.play()//pakhsh
+    audioElem.pause()
+    audioElem.duration //modat zaman (second)
+    audioElem.currentTime //second 
+    audioElem.playbackRate // speed of playing 1x 1.5x 2x 3x
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Object-Model</title>
+    <style>
+        #title {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center" id="title" class="text">| JS Course |</h1>
+    <ul class="ulItems">
+        <li class="list-item">about</li>
+        <li class="list-item">Contact</li>
+        <li class="list-item">Services</li>
+        <li class="list-item">Home</li>
+
+    </ul>
+    <hr>
+    <input type="text" id="input" value="react">
+    <select name="" id="select">
+        <option value="iran">Iran</option>
+        <option value="USA">USA</option>
+        <option value="Germany">Germany</option>
+
+    </select>
+    <script>
+        let h1Elem = document.getElementById('title')
+        console.log(h1Elem.innerHTML)
+        let liElems = document.querySelectorAll('.list-item')
+        console.log(liElems[3].innerHTML)
+        console.log(liElems[1].innerText)
+        console.log(liElems[0].textContent)
+        liElems[0].innerHTML = 'درباره ما'
+        let input = document.getElementById('input')
+        console.log(input.value)
+        let sbox = document.getElementById('select')
+        sbox.value = 'tehran'
+        input.value = 'vue js'
+        console.log(sbox.Value)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Object-Model</title>
+    <style>
+        #title {
+
+            font-weight: bolder;
+            font-size: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center" id="title" class="text">| JS Course |</h1>
+    <ul class="ulItems">
+        <li class="list-item">about</li>
+        <li class="list-item">Contact</li>
+        <li class="list-item">Services</li>
+        <li class="list-item">Home</li>
+
+    </ul>
+
+    <script>
+        let ulElem = document.querySelector('ul')
+        let newliElem = document.createElement('li')
+        let otherliElem = document.createElement('li')
+        otherliElem.innerHTML = 'user'
+        newliElem.innerHTML = 'products'
+        // ulElem.append(newliElem)
+        // ulElem.append(otherliElem)
+        ulElem.appendChild(newliElem)
+        ulElem.appendChild(otherliElem)
+        console.log(newliElem)
+        console.log(ulElem)
+    </script>
+
+</body>
+
+</html>
