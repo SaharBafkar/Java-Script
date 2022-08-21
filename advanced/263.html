@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>263</title>
+</head>
+<style>
+    div {
+        width: 220px;
+        padding: 25px;
+        border: 3px solid green;
+    }
+</style>
+
+<body>
+    <ul class="list">
+        <li>html</li>
+        <li>css</li>
+        <li>Js</li>
+        <li>bootstrap</li>
+        <li>react</li>
+    </ul>
+    <input type="text" placeholder="language">
+    <script>
+        const listItems = document.querySelectorAll('li')
+        const inputElem = document.querySelector('input')
+        const languageContainer = document.querySelector('ul')
+        // listItems.forEach(function (listItem) {
+        //     listItem.addEventListener('click', function (event) {
+        //         console.log(event.target);
+        //         event.target.remove()
+        //     })
+        // })
+        languageContainer.addEventListener('click', function (event) {
+            //console.log(event.target.tagname);
+            if (event.target.tagName === 'LI') {
+                event.target.remove()
+            }
+
+        })
+        inputElem.addEventListener('keypress', function (event) {
+            if (event.keyCode === 13) {
+                console.log('enter pressed');
+                let newLanguageLi = document.createElement('li')
+                newLanguageLi.innerHTML = event.target.value
+                languageContainer.append(newLanguageLi)
+                console.log(listItems);
+            }
+        })
+    </script>
+</body>
+
+</html>

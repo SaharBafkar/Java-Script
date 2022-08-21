@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>261</title>
+</head>
+<style>
+    div {
+        width: 220px;
+        padding: 25px;
+        border: 3px solid green;
+    }
+</style>
+
+<body>
+    <!-- <form onclick="alert('form')" action="">
+        gik,b
+        <div onclick="alert('div')">
+            hhhhh
+            <p onclick="alert('p')">
+                hello
+            </p>
+        </div>
+    </form> -->
+    <div class="div1">div1
+        <div class="div2">div2
+            <div class="div3">div3
+                <div class="div4">div4
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const divElems = document.querySelectorAll('div')
+        console.log(divElems);
+        divElems.forEach(function (div, index) {
+            // div.addEventListener('click', function () {
+            //     console.log('div' + (index + 1));
+            //     div.style.backgroundColor = 'blue'
+                div.addEventListener('click', function (event) {
+                console.log('div' + (index + 1));
+                event.target.style.backgroundColor = 'blue'
+            },{capture:true})
+        })
+    </script>
+</body>
+
+</html>

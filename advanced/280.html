@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>280-rest operator</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        const sum = (...args) => {//...args must be last 
+            // console.log('a:', a);
+            // console.log('b:', b);
+            // console.log('c:', c);
+            console.log('args:', args);
+            let sumAllArgs = 0
+            args.forEach(item => sumAllArgs += item)
+            return sumAllArgs
+        }
+        console.log(sum(2, 1, 4, 5, 2, 10));
+    </script>
+</body>
+
+</html>

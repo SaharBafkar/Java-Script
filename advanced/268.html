@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>268</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+
+
+
+    <script>
+        let books = [
+            { id: 1, name: 'bi shouri', price: 95000 },
+            { id: 2, name: 'shahname', price: 400000 },
+            { id: 3, name: 'padarmadadar', price: 78000 }
+        ]
+
+
+        function addbooks(name, price, callback) {
+            let newbook = {
+                id: books.length + 1,
+                name: name,
+                price: price
+            }
+            setTimeout(function () {
+                books.push(newbook)
+                callback()
+            }, 4000);
+        }
+        function logbooks() {
+            console.log(books);
+        }
+        addbooks('golestan', 1000000, logbooks)
+
+    </script>
+</body>
+
+</html>

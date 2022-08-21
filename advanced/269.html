@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>269
+    </title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+
+
+
+    <script>
+        let testnum = 100
+        function pow3(num1, num2) {
+            testnumber = 1000
+            return num1 ** num2
+        }
+        function pow(num1, num2) {
+            return num1 ** num2
+        }
+        function pow2(num1, num2) {
+            return Math.random() * num1 ** num2
+        }
+        console.log(pow(2, 3));//8 here pow is a pure function 
+        console.log(pow2(2, 3));//8 here pow2 is not a pure function because it returns vary output
+        console.log(pow3(2, 3));//here pow3 is not pure/it has side effect on testnum
+////////////pure function //////////////////////
+// 1- returns unique values
+// 2- has no side effect 
+//3-has no instruction like Math.random - new date,....
+
+    </script>
+</body>
+
+</html>

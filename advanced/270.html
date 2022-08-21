@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>270</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <input type="text" id="todo" class="todo-input">
+
+    <ul class="todolist">
+        <!-- todos -->
+    </ul>
+
+
+
+    <script>
+
+        const todoinputelem = document.querySelector('.todo-input')
+        const todolist = document.querySelector('.todolist')
+        function trim(val) {
+            return val.trim()
+        }
+        function tolowercase(value) {
+            return value.toLowerCase()
+        }
+        function inserttoli(todoval){
+            return '<li>'+todoval+'</li>'
+        }
+        function addtodo(event) {
+            //   console.log(event);
+            if (event.charCode === 13) {
+                //  console.log('enter pressed')
+                todolist.insertAdjacentHTML('beforeend', inserttoli(tolowercase(trim(todoinputelem.value))))
+                todoinputelem.value = ''
+               
+            }
+
+        }
+        todoinputelem.addEventListener('keypress', addtodo)
+
+
+    </script>
+</body>
+
+</html>

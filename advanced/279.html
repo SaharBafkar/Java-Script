@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>279</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        /////////////// ES5 //////////////////
+        // function sum(a, b, c) {
+        //     console.log('a:', a);
+        //     console.log('b:', b);
+        //     console.log('c:', c);
+
+        //     console.log(arguments);//only in functions scope access to function arguments//not defined in arrow functions
+        //     return a + b + c
+        // }
+        // console.log(sum(2, 4, 3, 3, 45, 78));
+        // arguments is a sudo array not an array!!!!
+        //how to convert arguments to an array:
+        function sum(a, b, c) {
+            // console.log('a:', a);
+            // console.log('b:', b);
+            // console.log('c:', c);
+
+            // console.log(arguments);//only in functions scope access to function arguments//not defined in arrow functions
+            let sumAllArgs = 0
+            let arrayArgs = Array.from(arguments)
+            arrayArgs.forEach(item => sumAllArgs += item)
+            return sumAllArgs
+        }
+        console.log(sum(2, 1, 4, 5, 2, 10));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>282</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <input type="text" placeholder="UserId" id="user-id">
+
+    <script>
+        //// Object Destructuring 
+        let user = {
+            id: 1,
+            name: 'sahar',
+            age: 22
+        }
+        // let id = user.id
+        // let name = user.name
+        // let age = user.age
+        // console.log(id);
+        // console.log(name);
+        // console.log(age);
+        let { id, name = 'Amir', age: userage } = user // the var name must be the same as obj properti name
+        // console.log(id);
+        // console.log(name);
+        // console.log(userage);
+        //////////////////////////////////////////////////////
+        let users = [
+            { id: 1, name: 'sahar', age: 38 },
+            { id: 2, name: 'Amir', age: 45 },
+            { id: 3, name: 'Delsa', age: 5 },
+            { id: 4, name: 'Nika', age: 2 }
+        ]
+        const getuser = userid => {
+            let mainuser = users.find(user => user.id == userid)
+            return mainuser
+        }
+        // let { name: username } = getuser(3)
+        // console.log('username:', username);
+        ////////////////////////////////////////////////////////
+        const userinput = document.querySelector('#user-id')
+        userinput.addEventListener('keypress', event => {
+            //console.log(event);
+            let { keyCode, target: input } = event
+            if (keyCode === 13) {
+                let { name } = getuser(input.value)
+                console.log('username:', name);
+            }
+        })
+    </script>
+
+</body>
+
+</html>

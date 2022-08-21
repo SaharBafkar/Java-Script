@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>281</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        //// Array Destructuring 
+        let user = [1, 'sahar', 38]
+        // let userId = user[0]
+        // let username=user[1]
+        // let userage=user[2]
+        let [userId, username, userage,usercity='Tehran'] = user
+        // console.log(userId)
+        // console.log(username)
+        // console.log(userage)
+
+        const shownumbers = () => [1, 3, 4, 2, 7, 8]
+       // let [firstnum, secondnum, thirdnum] = shownumbers()
+        let [firstnum,,, secondnum, ,thirdnum] = shownumbers()
+
+        console.log(firstnum);
+        console.log(secondnum);
+        console.log(thirdnum);
+        console.log(usercity);
+    </script>
+
+</body>
+
+</html>

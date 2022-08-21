@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>275-ES6-Arrow Function</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        // function sum(num1, num2) {
+        //     let addnum = num1 + num2
+        //     return addnum
+        // }
+
+
+        // const sum = (num1, num2) => {
+        //     let addnum = num1 + num2
+        //     return addnum
+        // }
+        // console.log(sum(8, 12));
+
+        // const pow = (num1, num2) => {
+        //     return num1 ** num2
+        // }
+        const pow = (num1, num2) => num1 ** num2
+        console.log(pow(2, 3));
+
+        const logger = value => console.log(value);//زمانیکه فقط یک ورودی داریم برای تابع نیازی به پرانتز باز و بسته نداریم.
+        const show = () => {        // وزمانیکه تابع ما ورودی ندارد حتما حتما باید یک پرانتز باز بسته بعد از = بذاریم
+        }
+        logger('test text')
+
+// const sqrfunct=value=>{
+//     return Math.sqrt(value)
+// }
+// sqrfunct(16)
+
+// const generateuser=(id,name,age)=>{
+//     return {id:id,name:name,age:age}
+// }
+// const generateuser=(id,name,age)=>({id:id,name:name,age:age})
+
+// console.log(generateuser(2,'sahar',38));
+
+//////////// default value for arrow function////////////////
+
+const generateuser=(id,name,age=18)=>({id:id,name:name,age:age})
+
+console.log(generateuser(2,'sahar'));
+
+    </script>
+</body>
+
+</html>

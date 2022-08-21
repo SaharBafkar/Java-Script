@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>286</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        //string padding
+        let username = 'sahar'
+        console.log(username.padEnd(10, '*'));
+        console.log(username.padStart(10, '-'));
+
+        /////////////////////////////////////////////
+        let size = '5'
+        console.log(size.padStart(2, '0'));
+        /////////////////////////////////////////////////
+
+        let phonenum = '09128823747'
+        let last4digits = phonenum.slice(-4)
+        let finalphonenum = last4digits.padStart(phonenum.length, '*')
+        console.log(finalphonenum);
+    </script>
+
+</body>
+
+</html>
