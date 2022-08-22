@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this...</title>
+</head>
+<style>
+    li {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <ul>
+        <li onclick="removeListItem(this)">Home</li>
+        <li onclick="removeListItem(this)">About</li>
+        <li onclick="removeListItem(this)">Contact</li>
+        <li onclick="removeListItem(this)">Services</li>
+        <li onclick="removeListItem(this)">Products</li>
+    </ul>
+
+    <script>
+        let user = {
+            id: 1,
+            name: 'sahar',
+            age: 37
+        }
+        let user2 = {
+            id: 2,
+            name: 'Amir',
+            age: 43
+        }
+
+        function showUser(score, city) {
+            console.log(this.name + ' is ' + this.age + ' years old => Score: ', score + ' city: ', city);
+        }
+        showUser.call(user, 20, 'Tehran')   //-> (user=this , 20=score)
+        showUser.call(user2, 200, 'Qazvin')
+
+        showUser.apply(user, [20, 'Tehran'])   //-> (user=this , 20=score)
+        showUser.apply(user2, [200, 'Qazvin'])
+
+        showUser.bind(user, 20, 'Tehran')()
+        let bindingFunc = showUser.bind(user2, 200, 'Qazvin')
+        bindingFunc()
+
+
+    </script>
+
+</body>
+
+</html>

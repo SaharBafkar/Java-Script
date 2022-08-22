@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chain</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+        let user = {
+            id: 2,
+            name: 'Amir',
+            age: 43,
+            address: {
+                country: 'Iran',
+                city: 'Qazvin',
+                street: 'AmirKabir'
+            }
+        }
+        let username = user.name
+
+        console.log(username);
+        console.log(user.address.city);
+        /////////////////optional chaining////////////////////////////////
+        // let userstreet = user.address.city?.street
+        let userstreet = user.address.city?.street
+        console.log(userstreet);//undefined
+    </script>
+
+</body>
+
+</html>

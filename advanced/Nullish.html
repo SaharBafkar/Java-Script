@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+
+        // let port = 0
+
+        // let devPort = port || 4000 // skip over every falsy valus
+        // console.log(devPort);
+        ////////////////ES11/////////////////////////////////
+        //     let port =NaN
+        //    // let port
+        //   //  let port=null
+        //     let devPort = port ?? 4000//null - undefined فقط از روی اینها رد میشه 
+        //     console.log(devPort);
+        /////////////////////////////////////////////////////////
+        let port = undefined
+        let testport = 0
+        let devPort = (testport || port) ?? 4000//output=>4000
+        console.log(devPort);
+    </script>
+
+</body>
+
+</html>

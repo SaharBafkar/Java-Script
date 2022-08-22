@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this...</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        let user = {
+            id: 1,
+            name: 'sahar',
+            age: 37,
+            walk: function () {
+                console.log(this.name + ' walked');
+            },
+            about: function () {
+                console.log('this in about',this);
+                setTimeout(function() {
+                    console.log('this in setTimeout',this);
+                    console.log(this.name + ' is ' + this.age + ' years old');
+                }.bind(user), 3000)
+                // setTimeout(()=> {
+                //     console.log('this in setTimeout',this);
+                //     console.log(this.name + ' is ' + this.age + ' years old');
+                // }, 3000)
+            }
+        }
+        let user2 = {
+            id: 2,
+            name: 'Amir',
+            age: 43,
+
+        }
+
+        // user.walk()
+        // user.walk.call(user2)
+        // user.about()
+        // user.about.call(user2)
+        // user.about.call(user2)
+        user.about()
+       //DRY=>Don't repeat Yourself
+
+
+    </script>
+
+</body>
+
+</html>

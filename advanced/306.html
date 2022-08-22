@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor-function</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        // let userSahar = {
+        //     id: 1,
+        //     name: 'Sahar',
+        //     age: 37,
+        //     city: 'qazvin',
+        //     job: 'web developer'
+        // }
+        // let userAmir = {
+        //     id: 2,
+        //     name: 'Amir',
+        //     age: 43,
+        //     city: 'qazvin',
+        //     job: 'web developer'
+        // }
+        // let userDelsa = {
+        //     id: 3,
+        //     name: 'Delsa',
+        //     age: 5,
+        //     city: 'qazvin',
+        //     job: 'student'
+        // }
+        // let userNika = {
+        //     id: 4,
+        //     name: 'Nika',
+        //     age: 2,
+        //     city: 'qazvin',
+        //     job: 'child'
+        // }
+        // let userArsin = {
+        //     id: 5,
+        //     name: 'Arsin',
+        //     age: 0,
+        //     city: 'qazvin',
+        //     job: 'Baby'
+        // }
+        ///////////////////////////DRY/////////////////////////
+
+        function Animal() {
+            this.name = 'dog'
+            this.color = 'brown'
+            this.canFly = false
+            this.footsCount = 4
+
+        }
+        let dogAnimal = new Animal()
+        console.log(dogAnimal);
+
+        let dogAnimal2 = new Animal()
+        console.log(dogAnimal2);
+        ///////////////////////////////////////////////////////////
+
+        function Person(personID, personName, personAge, personJob) {
+            this.id = personID
+            this.name = personName
+            this.age = personAge
+            this.job = personJob
+        }
+        let userSahar = new Person(1,'sahar',37,'Web Developer')
+        let userAmir = new Person(2,'Amir',43,'Python Developer')
+
+        console.log(userSahar);
+        console.log(userAmir);
+
+    </script>
+
+</body>
+
+</html>

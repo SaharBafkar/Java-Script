@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor-function</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+        ///////////////////////////////////////////////////////////
+
+        function Person(personID, personName, personAge, personJob) {
+            this.id = personID
+            this.name = personName
+            this.age = personAge
+            this.job = personJob
+
+            this.getName = function () {
+                return this.name
+            }
+            this.getAge = function () {
+                return this.age
+            }
+            this.getJob = function () {
+                return this.job
+            }
+            this.setName = function (newName) {
+                this.name = newName
+            }
+            this.setAge = function (newAge) {
+                this.age = newAge
+            }
+            this.setJob = function (newJob) {
+                this.job = newJob
+            }
+        }
+        let userSahar = new Person(1, 'sahar', 37, 'Web Developer')
+        let userAmir = new Person(2, 'Amir', 43, 'Python Developer')
+
+        console.log(userSahar.getName());
+        console.log(userAmir.getAge());
+        userSahar.setJob('JS Expert')
+        console.log(userSahar.getJob());
+
+    </script>
+
+</body>
+
+</html>

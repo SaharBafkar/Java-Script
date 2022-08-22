@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<style>
+    li {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <ul>
+        <li onclick="removeListItem(this)">Home</li>
+        <li onclick="removeListItem(this)">About</li>
+        <li onclick="removeListItem(this)">Contact</li>
+        <li onclick="removeListItem(this)">Services</li>
+        <li onclick="removeListItem(this)">Products</li>
+    </ul>
+    <script>
+        // this
+        function removeListItem(el) {
+            console.log(el);
+            el.remove()
+        }
+        ///////////////////////////////////////////////////////////////
+
+        function sumNumbers() {
+            console.log(arguments);
+            let sum = 0
+            for (let arg of arguments) {
+                sum += arg
+
+            }
+            return sum
+        }
+
+        // console.log('sum is: ',sumNumbers(2, 5, 3));
+        console.log('this in function', this);
+
+        ///////////////////////////////////////////////////////////
+        let user = {
+            id: 1,
+            name: 'sahar',
+            age: 37,
+            walk: function () {
+                console.log('user walked');
+            },
+            showthis: function () {
+                console.log(this);
+            },
+            setName: function (newName) {
+                this.name = newName
+            },
+            setAge: function (newAge) {
+                this.age = newAge
+            }
+
+        }
+        user.walk()
+        user.showthis()
+        user.setName('Amir')
+        user.setAge(45)
+        console.log(user);
+    </script>
+
+</body>
+
+</html>

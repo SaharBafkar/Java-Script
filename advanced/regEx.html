@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regEx</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        //regEx=regular expression only for strings
+        //برای بررسی رشته ها و مثلا پیدا کردن یک الگوی خاص درون رشته ها  
+
+        // let regexCode = /sahar/
+        // let regexCode2 = /B.f/
+        // let regexCode3 = /D.+r/
+
+        // let text = 'I am sahar Bafkar, Web Developer'
+
+        // console.log(regexCode.test(text));//true
+        // console.log(regexCode2.test(text));//true
+        // console.log(regexCode3.test(text));//true
+
+//////////////////////////////////////////////////////////////////
+
+        let emailRegEx = /.+@.+.com/
+        let userEmail = prompt('please enter your email address: ')
+        console.log(emailRegEx.test(userEmail));
+        
+///////////////////////////////////////////////////////////////////
+
+    </script>
+
+</body>
+
+</html>
