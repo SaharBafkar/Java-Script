@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shared-symbol</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+
+        let userIDSymbol = Symbol.for('user ID')
+        let userObj = {
+            id: 1,
+            name: 'sahar',
+            age: 37,
+            [userIDSymbol]: 'hdcgbedbcfjkcfwed'
+        }
+        console.log(userObj[Symbol.for('user ID')]);
+        console.log(userIDSymbol === Symbol.for('user ID'));
+    </script>
+
+</body>
+
+</html>

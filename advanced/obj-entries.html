@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+        let user = {
+            id: 2,
+            name: 'Amir',
+            age: 43,
+            address: {
+                country: 'Iran',
+                city: 'Qazvin',
+                street: 'AmirKabir'
+            }
+        }
+        
+      // console.log(user);
+      let entriesUser=Object.entries(user)
+      for (const iterator of entriesUser) {
+        console.log(`${iterator[0]}:${iterator[1]}`);
+      }
+      console.log(entriesUser);
+    </script>
+
+</body>
+
+</html>

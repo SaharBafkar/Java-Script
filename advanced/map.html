@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+        //     for (const i of user) {
+        //         console.log(i);
+        //     }
+        //    // console.log(user);
+        let mapUser = new Map()
+        mapUser.set('id', 1)
+        mapUser.set('firstName', 'Sahar')
+        mapUser.set('lastName', 'Bafkar')
+        mapUser.set('age', 37)
+        console.log(mapUser, '&& size: ', mapUser.size);
+        console.log(mapUser.has('city'));
+        console.log(mapUser.has('age', 37));
+        // mapUser.delete('age')
+        console.log(mapUser.get('firstName'));
+        // mapUser.clear()
+        console.log(mapUser);
+        mapUser.forEach((value, key) => console.log(`${key}:${value}`))
+        ///////////////////////////////////////////////////////////////
+        //converting objects to map 
+        let user = {
+            id: 2,
+            name: 'Amir',
+            family: 'Motefaker',
+            age: 43
+        }
+        let userMap = new Map(Object.entries(user))
+        console.log(userMap);
+        ///////////////////////////////////////////////////////////////
+        //converting map to object
+        let userObj = Object.fromEntries(userMap)
+        console.log(userObj);
+
+
+    </script>
+
+</body>
+
+</html>

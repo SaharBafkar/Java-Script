@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        //symbols get a unique value in whole project
+        // let symbol1 = Symbol('teacher')
+        // let symbol2 = Symbol('admin')
+        // let symbol3 = Symbol('userID')
+        // let symbol4 = Symbol('Basket')
+        // console.log(symbol1,symbol2,symbol3,symbol4);
+        // console.log(symbol1===symbol2);
+        // console.log(typeof(symbol1));
+
+
+        let userIDSymbol = Symbol('user ID')
+        let userObj = {
+            id: 1,
+            name: 'sahar',
+            age: 37,
+            [userIDSymbol]: 'hdcgbedbcfjkcfwed'
+        }
+        console.log(userObj[userIDSymbol]);
+
+        for (let item in userObj){
+            console.log(item);
+        }
+    </script>
+
+</body>
+
+</html>

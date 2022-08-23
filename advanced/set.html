@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+
+        let scores = [12, 17, 89, 90, 43, 21, 17, 12, 21]
+        console.log(scores);
+        let user = {
+            id: 2,
+            name: 'Amir',
+            age: 43
+        }
+        console.log(user);
+        //////////////////// set/map /////////////////////
+        //set-> no duplicated data
+        let nums = new Set()
+        nums.add(20)
+        nums.add(12)
+        nums.add(10)
+        nums.add(90)
+        nums.add(1)
+        nums.add(12)
+        nums.add(20)//not add because of duplication
+        console.log('before delete: ', nums, '$$ size:', nums.size);
+
+        // nums.delete(20)
+        // console.log('after delete: ',nums,'$$ size:',nums.size);
+
+        // nums.clear()
+        // console.log('after clear',nums,'$$ size:',nums.size);
+
+        console.log(nums.has(20));//->true or false
+        ////////////////////////////////////////////////////////////////
+        nums.forEach(num => console.log(num))//only forEach works on sets
+        //////////////////////////////////////////////////////////////////
+        //converting array to set
+        let setScores = new Set(scores)
+        console.log('scores array', scores);
+        console.log('scores set', setScores);
+        //////////////////////////////////////////////////////
+        //converting set to array
+        let arrayNums = [...nums]
+        console.log(arrayNums);
+        /////////////////////////////////////////////////////
+        for (const num of nums) {
+            console.log(num);
+        }
+    </script>
+
+</body>
+
+</html>

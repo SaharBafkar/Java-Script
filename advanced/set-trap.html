@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy...</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        //Proxy(Set Trap)
+        let user = {
+            id: 1,
+            firstName: 'Sahar',
+            lastName: 'Bafkar',
+            //age: 37
+        }
+
+        let proxyUser = new Proxy(user, {
+            get: function (target, property) {
+                console.log('target: ', target);
+                console.log('property: ', property);
+                // return target[property] ? target[property] : null
+                return property in target ? target[property] : 'sorry,not exist!'
+            },
+            set: function (target, property, value) {
+                console.log('target ', target);
+                console.log('property', property);
+                console.log('value', value);
+
+                if (property === 'age' && value < 18) {
+                    value = 18
+                }
+
+                target[property] = value
+            }
+        })
+        user.age = 12
+        user.phone = '1234'//set
+        console.log(user.phone);
+    </script>
+
+</body>
+
+</html>

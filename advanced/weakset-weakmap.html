@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weakset-weakmap</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <script>
+        //////////// weakset
+        let mySet = new Set()
+
+        mySet.add('Sahar')
+        console.log('set:', mySet, '&& size: ', mySet.size);
+        let fakeObj = { data: 'fake' }
+        let myWeakSet = new WeakSet()
+        myWeakSet.add(fakeObj)
+        console.log('set:', myWeakSet, '&& size: ', myWeakSet.size);
+//////////////////////////////////////////////////////////////
+function FakeData(){
+    this.data={
+        data:'Fake Data'
+
+    }
+}
+window.fakedata=new FakeData()
+
+let mySet1=new WeakSet()
+mySet1.add(window.fakedata)
+delete window.fakedata
+console.log(window.fakedata);
+console.log(mySet1);
+
+    </script>
+
+</body>
+
+</html>

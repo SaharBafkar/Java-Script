@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy...</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        //Proxy(Get Trap)
+        let user = {
+            id: 1,
+            firstName: 'Sahar',
+            lastName: 'Bafkar',
+            age: 37
+        }
+
+        let proxyUser = new Proxy(user, {
+            get: function (target, property) {
+                console.log('target: ', target);
+                console.log('property: ', property);
+                // return target[property] ? target[property] : null
+                return property in target ? target[property] : 'sorry,not exist!'
+            }
+        })
+        // console.log('user obj:', user.firstName);//read
+        console.log('user proxy: ', proxyUser.firstName);//read-get
+
+        console.log('user proxy: ', proxyUser.phone);//read-get
+
+        console.log('age' in user);//in===exist
+    </script>
+
+</body>
+
+</html>
