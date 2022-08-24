@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise finally</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+     
+//pending
+//full filled->resolved
+//reject->rejected
+        let myPromise = new Promise((resolve, reject) => {
+            const loginFlag = false
+            // resolve()
+            // reject()
+
+            setTimeout(() => {
+                console.log('login check: ');
+
+                if (loginFlag) {
+                    resolve('you can enter your panel')
+                } else {
+                    reject(new Error('you can not enter your panel'))
+                }
+
+            }, 3000)
+        })
+
+        // myPromise.then(success, error)
+
+        myPromise
+            .then((success) => {
+                console.log(success)
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(()=>{
+                console.log('promise finished');
+            })
+       // console.log(myPromise);
+
+    </script>
+
+</body>
+
+</html>

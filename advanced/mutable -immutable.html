@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mutable-immutable</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        //primitives are immutable
+        let num1 = 20
+        let flag = false
+        flag = true//re-assign
+        num1 = 10 //re-assign
+        console.log(num1);//10
+        console.log(flag);//false
+
+
+        let user1 = {
+            id: 1,
+            name: 'Sahar',
+            age: 37
+        }
+        user1 = { id: 12 }//re-assign
+        let user2 = user1
+        user2.name = 'Amir' //mutate
+        console.log(user1);
+        console.log(user2);
+
+
+        // let names = ['Amir', 'Sahar', 'Delsa', 'Nika']
+        // names = names.filter(name => name.length > 3)
+        // console.log(names);
+///////////////////////////////////
+//Mutable Array Methods in JS
+//.pop()
+//.push()
+//.shift()
+//.unshift()
+//.reverse()
+//.sort()
+//.splice()
+/////////////////////////////////
+
+let names = ['Amir', 'Sahar', 'Delsa', 'Nika'];
+
+[...names].forEach(name=>console.log(name));
+
+
+names.slice().reverse().forEach(name=>console.log(name));
+
+
+[...names].reverse().forEach(name=>console.log(name))
+
+console.log(names);
+    </script>
+
+</body>
+
+</html>

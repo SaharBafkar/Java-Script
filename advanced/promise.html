@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        let books = [
+            { id: 1, name: 'bi shouri', price: 95_000 },
+            { id: 2, name: 'Shahname ', price: 400_000 },
+            { id: 3, name: 'Peda-O-Madar ', price: 78_000 }
+
+        ]
+        function addBook(name, price, callback) {
+            let newbook = {
+                id: books.length + 1,
+                name: name,
+                price: price
+            }
+            return new Promise((resolve, reject) => {
+                setTimeout(function () {
+                    if (books.push(newbook)) {
+                        resolve()
+                    } else {
+                        reject()
+                    }
+                })
+            }, 500)
+        }
+        function logBooks() {
+            console.log(books);
+        }
+        console.log(addBook);
+        addBook('Golestan',90000).then(()=>{
+            console.log(books);
+        })
+        // logBooks()
+
+        //promise| ES6=> Rejected/Resolved
+        let myPromise = new Promise((resolve, reject) => {
+
+            const loginFlag = true
+            setTimeout(() => {
+                console.log('login check: ');
+
+                if (loginFlag) {
+                    resolve()
+                } else {
+                    reject()
+                }
+
+            }, 3000)
+        })
+        function success() {
+            console.log('success :)')
+        }
+        function error() {
+            console.log('Error :(')
+        }
+        // myPromise.then(success, error)
+
+        myPromise
+            .then(success)//promise.then(()=>console.log('success :)'))
+            .catch(error)
+
+    </script>
+
+</body>
+
+</html>

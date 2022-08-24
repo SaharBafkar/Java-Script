@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASI | Automatic Semicolon Insertion</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        // let num1 = 2
+        // let num2 = 3
+
+        // console.log(num1 + num2)//5
+
+        // console.log('log');
+        ////////////////////////////////////////////////////////////
+        //         let numbers = [1, 2, 3, 4, 5, 6];
+
+        // ['Amir','Sahar','Delsa','Nika','Arsin'].map(name=>console.log(name))
+        //////////////////////////////////////////////////////////////
+        const nums = [1, 2, 3, 4, 5]
+
+        nums.forEach(num => console.log(num));
+        (function () {
+            console.log('IIFE :))');
+        })()
+        /////////////////////////////////////////////////////////////////
+
+        const userGenerator = (username, age, job) => {
+            return
+            {
+                username,
+                    age,
+                    job
+            }
+        }
+        let userAmir = userGenerator('Amir', 43, 'Python Developer')
+        console.log(userAmir);
+        ///////////////////////////////////////////////////////////
+
+        let a = 5
+        let b = 3 + a
+        let c = 'sAHAr'
+            console.log(c.toLowerCase())
+    </script>
+
+</body>
+
+</html>

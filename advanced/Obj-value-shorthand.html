@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-value-shorthand| ES6</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        let userid = 1
+        let username = 'Sahar'
+        let userage = 37
+        let userjob = 'Web Developer'
+
+        let user = {
+            userid,
+            username,
+            userage,
+            userjob
+        }
+        console.log(user);
+        ///////////////////////////////////////////
+        const userMaker = (firstname, lastname, age) => {
+            let newUser = {
+                firstname,
+                lastname,
+                age
+            }
+            return newUser
+        }
+        let userSahar = userMaker('Sahar', 'Bafkar', 37)
+        console.log(userSahar);
+    </script>
+
+</body>
+
+</html>
