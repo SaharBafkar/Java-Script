@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaining handler</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        let wordPromise = new Promise((resolve, reject) => {
+            let text = 'Web Developer'
+            if (text) {
+                resolve(text)
+
+            } else {
+                reject(new Error('text is empty'))
+            }
+        }
+        )
+        wordPromise
+            .then(response=> response.split(''))
+            .then(response2=>response2.reverse())
+            .then(response3=>response3.join(''))
+            .then(response4=>console.log(response4))
+            .catch(err=>console.log(err))
+    </script>
+
+</body>
+
+</html>
